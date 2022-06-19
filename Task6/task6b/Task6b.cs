@@ -27,6 +27,7 @@ class StringBuilderDemo
         Console.WriteLine("Capacity of String builder 3 :" + sb3.Capacity);
         Console.WriteLine("Capacity of String builder 4 :" + sb4.Capacity);
 
+        //startIndex, length
         sb4.Remove(4, 4);
         Console.WriteLine("String builder 4 after remove is:" + sb4);
 
