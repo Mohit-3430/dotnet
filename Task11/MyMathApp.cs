@@ -18,3 +18,6 @@ class MyMathApp
         Console.WriteLine("{0} * {1} = {2}", num1, num2, mul);
     }
 }
+
+// csc /reference:mymathlib.dll .\MyMathApp.cs
+// .\MyMathApp.exe 10 20

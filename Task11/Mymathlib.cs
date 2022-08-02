@@ -13,3 +13,5 @@ namespace mymathlib
         }
     }
 }
+
+// csc /target:library /out:mymathlib.dll .\Mymathlib.cs
