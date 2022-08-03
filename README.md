@@ -47,6 +47,11 @@
 
 ## Task 11
 
+**DLL:**
+
+- Dynamic-link library (DLL) is Microsoft's implementation of the shared library concept in the Microsoft Windows and OS/2 operating systems.
+- A shared library or shared object is a file that is intended to be shared by executable files and further shared object files. Modules used by a program are loaded from individual shared objects into memory at load time or runtime, rather than being copied by a linker when it creates a single monolithic executable file for the program.
+
 - libname.cs -> libname.dll
   - `csc /target:library /out:libname.dll libname.cs`
 - MainFile.cs -> MainFile.exe
