@@ -27,20 +27,20 @@ namespace validate
             this.ageUpDownPicker = new NumericUpDown();
             this.favoriteColorComboBox = new ComboBox();
             // Name Label
-            this.label1.Location = new System.Drawing.Point(56, 32);
+            this.label1.Location = new System.Drawing.Point(55, 32);
             this.label1.Size = new System.Drawing.Size(40, 23);
-            this.label1.Text = "Name:";
+            this.label1.Text = "Name";
             // Age Label
             this.label2.Location = new System.Drawing.Point(40, 64);
-            this.label2.Size = new System.Drawing.Size(56, 23);
+            this.label2.Size = new System.Drawing.Size(55, 23);
             this.label2.Text = "Age (3-5)";
             // Favorite Color Label
-            this.label3.Location = new System.Drawing.Point(24, 96);
+            this.label3.Location = new System.Drawing.Point(25, 96);
             this.label3.Size = new System.Drawing.Size(80, 23);
             this.label3.Text = "Favorite color";
             // ErrorBlinkStyle.AlwaysBlink Label
             this.label4.Location = new System.Drawing.Point(264, 32);
-            this.label4.Size = new System.Drawing.Size(160, 23);
+            this.label4.Size = new System.Drawing.Size(200, 23);
             this.label4.Text = "ErrorBlinkStyle.AlwaysBlink";
             // ErrorBlinkStyle.BlinkIfDifferentError Label
             this.label5.Location = new System.Drawing.Point(264, 64);
@@ -61,16 +61,16 @@ namespace validate
             this.ageUpDownPicker.TabIndex = 4;
             this.ageUpDownPicker.Validated += new System.EventHandler(this.ageUpDownPicker_Validated);
             // Favorite Color ComboBox
-            this.favoriteColorComboBox.Items.AddRange(new object[] { "None", "Red", "Yellow", "Green", "Blue", "Purple" });
             this.favoriteColorComboBox.Location = new System.Drawing.Point(112, 96);
-            this.favoriteColorComboBox.Size = new System.Drawing.Size(120, 21);
+            this.favoriteColorComboBox.Size = new System.Drawing.Size(120, 20);
+            this.favoriteColorComboBox.Items.AddRange(new object[] { "None", "Red", "Yellow", "Green", "Blue", "Purple" });
             this.favoriteColorComboBox.TabIndex = 5;
             this.favoriteColorComboBox.Validated += new
             System.EventHandler(this.favoriteColorComboBox_Validated);
 
             // Set up how the form should be displayed and add the controls to the form.
             this.ClientSize = new System.Drawing.Size(464, 150);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
+            this.Controls.AddRange(new Control[] {
                 this.label6,this.label5,this.label4,this.label3,
                 this.favoriteColorComboBox,this.ageUpDownPicker,
                 this.label2,this.label1,this.nameTextBox
@@ -78,20 +78,22 @@ namespace validate
             this.Text = "Error Provider Example";
 
             // Create and set the ErrorProvider for each data entry control.
-            nameErrorProvider = new System.Windows.Forms.ErrorProvider();
+            nameErrorProvider = new ErrorProvider();
             nameErrorProvider.SetIconAlignment(this.nameTextBox, ErrorIconAlignment.MiddleRight);
             nameErrorProvider.SetIconPadding(this.nameTextBox, 2);
             nameErrorProvider.BlinkRate = 1000;
-            nameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
-            ageErrorProvider = new System.Windows.Forms.ErrorProvider();
+            nameErrorProvider.BlinkStyle = ErrorBlinkStyle.AlwaysBlink;
+            // 
+            ageErrorProvider = new ErrorProvider();
             ageErrorProvider.SetIconAlignment(this.ageUpDownPicker, ErrorIconAlignment.MiddleRight);
             ageErrorProvider.SetIconPadding(this.ageUpDownPicker, 2);
-            ageErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.BlinkIfDifferentError;
-            favoriteColorErrorProvider = new System.Windows.Forms.ErrorProvider();
+            ageErrorProvider.BlinkStyle = ErrorBlinkStyle.BlinkIfDifferentError;
+            // 
+            favoriteColorErrorProvider = new ErrorProvider();
             favoriteColorErrorProvider.SetIconAlignment(this.favoriteColorComboBox, ErrorIconAlignment.MiddleRight);
             favoriteColorErrorProvider.SetIconPadding(this.favoriteColorComboBox, 2);
             favoriteColorErrorProvider.BlinkRate = 1000;
-            favoriteColorErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            favoriteColorErrorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
         }
         private void nameTextBox1_Validated(object sender, System.EventArgs e)
         {
