@@ -1,10 +1,6 @@
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-
 namespace validate
 {
-    public class Form1 : System.Windows.Forms.Form
+    public class Form1 : Form
     {
         private Label label1, label2, label3, label4, label5, label6;
         private TextBox nameTextBox;

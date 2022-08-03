@@ -17,8 +17,12 @@ class StringBuilderDemo
         Console.WriteLine("sb1 is :" + sb1);
         Console.WriteLine("sb2 is:" + sb2);
 
-        Console.WriteLine("sb2 after Change:");
+        Console.WriteLine("After insert operation:");
         sb2.Insert(4, "123");
+        Console.WriteLine(sb2);
+
+        Console.WriteLine("After remove Operation:");
+        sb2.Remove(4, 3);
         Console.WriteLine(sb2);
 
         Console.WriteLine();
@@ -32,6 +36,7 @@ class StringBuilderDemo
         Console.WriteLine("String builder 4 after remove is:" + sb4);
 
         Console.WriteLine();
+        //The toString() method of the StringBuilder class reruns String value of the current object
         string str = sb4.ToString();
         Console.WriteLine("Entraced String is :" + str);
     }
