@@ -10,6 +10,7 @@
 
 - String class [Programiz](https://www.programiz.com/csharp-programming/string)
 - String Buffer class [GFG](geeksforgeeks.org/stringbuilder-in-c-sharp/)
+  - also use System.Text
 
 ## Task 7
 
