@@ -18,8 +18,8 @@ public class Plindrome
         }
 
         if (number == reverse)
-            Console.WriteLine(number + " is a Palindrome");
+            Console.WriteLine("{0} is a Palindrome", number);
         else
-            Console.WriteLine(number + " is not a Palindrome");
+            Console.WriteLine("{0} is not a Palindrome", number);
     }
 }
